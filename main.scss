@@ -49,7 +49,7 @@ $primary-dark: rgba(28, 119, 255, 0.808);
   height: 500px;
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   .menuBar {
-    height: 180px;
+    height: 220px;
     //chowanie ikonki hamburgera przy dużej rozdzielczości
     .hamburgerIcon {
       @media screen and (min-width: #{$tablet}) {
@@ -76,7 +76,8 @@ $primary-dark: rgba(28, 119, 255, 0.808);
     }
     .menu {
       display: flex;
-      align-items: center;
+      //align-items: center;
+      margin-top: 25px;
       .menuItem {
         font-size: 1.8rem;
         text-decoration: none;
@@ -92,17 +93,18 @@ $primary-dark: rgba(28, 119, 255, 0.808);
       }
     }
   }
-
+  @media screen and (max-width: #{$tablet}) {
     .topnav {
-      height: 180px;
+      height: 220px;
       overflow: hidden;
       position: relative;
-      //flex-direction: column;
       #myLinks {
         display: none;
         flex-direction: column;
+        margin: 50px -20px 0 0;
       }
       .hamburgerIcon {
+        margin: 10px 10px 0 0;
         color: $brokenWhite;
         background: $primary-dark;
         border-radius: 5px;
@@ -118,14 +120,13 @@ $primary-dark: rgba(28, 119, 255, 0.808);
       }
     }
   }
-  .headerTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    //width: 100%;
-    color: $brokenWhite;
-    font-size: 4rem;
-    margin-top: -180px;
-  }
-
+}
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: $brokenWhite;
+  font-size: 4rem;
+  margin-top: -220px;
+}

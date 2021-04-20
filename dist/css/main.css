@@ -41,7 +41,7 @@
 }
 
 .headerMountain .menuBar {
-  height: 180px;
+  height: 220px;
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
@@ -72,7 +72,7 @@
 
 .headerMountain .menuBar .menu {
   display: flex;
-  align-items: center;
+  margin-top: 25px;
 }
 
 .headerMountain .menuBar .menu .menuItem {
@@ -90,31 +90,32 @@
   border-radius: 5px;
 }
 
-.headerMountain .topnav {
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-}
-
-.headerMountain .topnav #myLinks {
-  display: none;
-  flex-direction: column;
-}
-
-.headerMountain .topnav .hamburgerIcon {
-  color: #ece9e9;
-  background: rgba(28, 119, 255, 0.808);
-  border-radius: 5px;
-  padding: 14px 16px;
-  text-decoration: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.headerMountain .topnav .hamburgerIcon:hover {
-  background-color: rgba(28, 119, 255, 0.808);
-  color: black;
+@media screen and (max-width: 867px) {
+  .headerMountain .topnav {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+  }
+  .headerMountain .topnav #myLinks {
+    display: none;
+    flex-direction: column;
+    margin: 50px -20px 0 0;
+  }
+  .headerMountain .topnav .hamburgerIcon {
+    margin: 10px 10px 0 0;
+    color: #ece9e9;
+    background: rgba(28, 119, 255, 0.808);
+    border-radius: 5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .headerMountain .topnav .hamburgerIcon:hover {
+    background-color: rgba(28, 119, 255, 0.808);
+    color: black;
+  }
 }
 
 .headerTitle {
@@ -124,5 +125,5 @@
   height: 100%;
   color: #ece9e9;
   font-size: 4rem;
-  margin-top: -180px;
+  margin-top: -220px;
 }
