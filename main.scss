@@ -8,7 +8,11 @@ $phone_big: "601px";
 $phone: "431px";
 $phone_small: "376px";
 
+//colors
 $brokenWhite: rgb(236, 233, 233);
+$primary-light: rgba(87, 153, 252, 0.753);
+$primary-dark: rgba(28, 119, 255, 0.808);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,6 +49,7 @@ $brokenWhite: rgb(236, 233, 233);
   height: 400px;
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   .menuBar {
+    justify-content: space-between;
     padding: 0 30px;
     display: flex;
     .logo {
@@ -63,10 +68,19 @@ $brokenWhite: rgb(236, 233, 233);
     }
     .menu {
       display: flex;
+      align-items: center;
       .menuItem {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-decoration: none;
-        color: $brokenWhite;
+        color: #000;
+        font-weight: bold;
+        padding: 10px 20px;
+        height: 40px;
+        font-family: 'Trebuchet MS', sans-serif;
+        &:hover {
+          background: $primary-light;
+          border-radius: 5px;
+        }
       }
     }
   }

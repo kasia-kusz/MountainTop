@@ -41,6 +41,7 @@
 }
 
 .headerMountain .menuBar {
+  justify-content: space-between;
   padding: 0 30px;
   display: flex;
 }
@@ -64,10 +65,20 @@
 
 .headerMountain .menuBar .menu {
   display: flex;
+  align-items: center;
 }
 
 .headerMountain .menuBar .menu .menuItem {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  color: #ece9e9;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  height: 40px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.headerMountain .menuBar .menu .menuItem:hover {
+  background: rgba(87, 153, 252, 0.753);
+  border-radius: 5px;
 }
