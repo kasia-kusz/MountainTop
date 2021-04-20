@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MountainTop</title>
-  <link rel="stylesheet" href="./css/main.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MountainTop</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/86133cea54.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="headerMountain">
+      <div class="menuBar topnav">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./assets/mountain-icon.svg"
+            alt="MountainTop logo"
+          />
+          <p class="logoText">MountainTop</p>
+        </div>
+        <div class="menu" id="myLinks">
+          <a class="menuItem" href="#home">Home</a>
+          <a class="menuItem" href="#about">About</a>
+          <a class="menuItem" href="#services">Services</a>
+          <a class="menuItem" href="#contact">Contact</a>
+        </div>
+        <a
+          href="javascript:void(0);"
+          class="hamburgerIcon"
+          onclick="myFunction()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="headerTitle">Climb to the Top</div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (screen.width < 867) {
+            if (x.style.display === "flex") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "flex";
+            }
+          }else{
+            x.style.display = "flex";
+          }
+        }
+      </script>
+    </header>
 
-</head>
-<body>
-  
-  <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-</body>
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+  </body>
 </html>

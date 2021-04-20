@@ -1,0 +1,132 @@
+$laptop_big: "1601px";
+$laptop: "1480px";
+$laptop_small: "1281px";
+$tablet_big: "1100px";
+$tablet: "867px";
+$tablet_small: "769px";
+$phone_big: "601px";
+$phone: "431px";
+$phone_small: "376px";
+
+//colors
+$brokenWhite: rgb(236, 233, 233);
+$primary-light: rgba(87, 153, 252, 0.753);
+$primary-dark: rgba(28, 119, 255, 0.808);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.sectionWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  @media screen and (max-width: #{$laptop}) {
+    max-width: 1080px;
+    // wyliczone z proporcji czyli skoro dla 1920 jest 1400px, to liczysz 1920/1400 = 1,371428571428571 wiec dla 1400/1,371428571428571 jest 1080px
+  }
+  @media screen and (max-width: #{$laptop-small}) {
+    max-width: 972px;
+    // 729/3=243 wynik wyżej 729+243=927
+  }
+  @media screen and (max-width: #{$tablet-big}) {
+    max-width: 729px;
+    // wyliczone z proporcji czyli skoro dla 1600 jest 1080px
+  }
+  @media screen and (max-width: #{$tablet-small}) {
+    max-width: 495px;
+    //729/601=1.21297836938 a 601/1.21297836938=495px
+  }
+}
+
+//Utilities
+
+.headerMountain {
+  height: 500px;
+  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
+  .menuBar {
+    height: 220px;
+    //chowanie ikonki hamburgera przy dużej rozdzielczości
+    .hamburgerIcon {
+      @media screen and (min-width: #{$tablet}) {
+        display: none;
+      }
+    }
+    justify-content: space-between;
+    padding: 0 30px;
+    display: flex;
+    .logo {
+      display: flex;
+      .logo-img {
+        height: 90px;
+      }
+      .logoText {
+        display: flex;
+        //align-items: center;
+        margin-left: 10px;
+        margin-top: 25px;
+        color: $brokenWhite;
+        font-family: "Brush Script MT", cursive;
+        font-size: 3rem;
+      }
+    }
+    .menu {
+      display: flex;
+      //align-items: center;
+      margin-top: 25px;
+      .menuItem {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        padding: 10px 20px;
+        height: 40px;
+        font-family: "Trebuchet MS", sans-serif;
+        &:hover {
+          background: $primary-light;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: #{$tablet}) {
+    .topnav {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      #myLinks {
+        display: none;
+        flex-direction: column;
+        margin: 50px -20px 0 0;
+      }
+      .hamburgerIcon {
+        margin: 10px 10px 0 0;
+        color: $brokenWhite;
+        background: $primary-dark;
+        border-radius: 5px;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover {
+          background-color: $primary-dark;
+          color: black;
+        }
+      }
+    }
+  }
+}
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: $brokenWhite;
+  font-size: 4rem;
+  margin-top: -220px;
+}
