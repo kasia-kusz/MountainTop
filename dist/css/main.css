@@ -41,16 +41,10 @@
 }
 
 .headerMountain .menuBar {
-  height: 220px;
+  height: 80px;
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
-}
-
-@media screen and (min-width: 867px) {
-  .headerMountain .menuBar .hamburgerIcon {
-    display: none;
-  }
 }
 
 .headerMountain .menuBar .logo {
@@ -78,7 +72,7 @@
 .headerMountain .menuBar .menu .menuItem {
   font-size: 1.8rem;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   padding: 10px 20px;
   height: 40px;
@@ -90,34 +84,42 @@
   border-radius: 5px;
 }
 
+.headerMountain .menuBar .hamburgerIcon {
+  margin: 10px 10px 0 0;
+  display: none;
+  color: #ece9e9;
+  background: rgba(28, 119, 255, 0.808);
+  border-radius: 5px;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.headerMountain .menuBar .hamburgerIcon:hover {
+  background-color: rgba(28, 119, 255, 0.808);
+  color: black;
+}
+
+.headerMountain .menuBar .hamburgerIcon.visible {
+  display: initial;
+}
+
 @media screen and (max-width: 867px) {
-  .headerMountain .topnav {
-    height: 220px;
-    overflow: hidden;
-    position: relative;
-  }
-  .headerMountain .topnav .myLinks {
+  .headerMountain .menuBar .menu {
+    height: 100%;
+    position: fixed;
     display: none;
-    flex-direction: column;
-    margin: 50px -20px 0 0;
-  }
-  .headerMountain .topnav .myLinks.visible {
-    display: flex;
-  }
-  .headerMountain .topnav .hamburgerIcon {
-    margin: 10px 10px 0 0;
-    color: #ece9e9;
-    background: rgba(28, 119, 255, 0.808);
-    border-radius: 5px;
-    padding: 14px 16px;
-    text-decoration: none;
-    position: absolute;
+    top: 80px;
+    height: calc(100% - 80px);
+    left: 0;
     right: 0;
-    top: 0;
+    background-color: black;
+    margin-top: 0;
   }
-  .headerMountain .topnav .hamburgerIcon:hover {
-    background-color: rgba(28, 119, 255, 0.808);
-    color: black;
+  .headerMountain .menuBar .menu.visible {
+    display: initial;
   }
 }
 

@@ -49,13 +49,8 @@ $primary-dark: rgba(28, 119, 255, 0.808);
   height: 500px;
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   .menuBar {
-    height: 220px;
-    //chowanie ikonki hamburgera przy dużej rozdzielczości
-    .hamburgerIcon {
-      @media screen and (min-width: #{$tablet}) {
-        display: none;
-      }
-    }
+    height: 80px;
+    // to do przepisania na fixed i na top, navbar nigdy nie jest w hero(showcase)
     justify-content: space-between;
     padding: 0 30px;
     display: flex;
@@ -81,7 +76,7 @@ $primary-dark: rgba(28, 119, 255, 0.808);
       .menuItem {
         font-size: 1.8rem;
         text-decoration: none;
-        color: #000;
+        color: #fff;
         font-weight: bold;
         padding: 10px 20px;
         height: 40px;
@@ -92,34 +87,41 @@ $primary-dark: rgba(28, 119, 255, 0.808);
         }
       }
     }
+
+    .hamburgerIcon {
+      margin: 10px 10px 0 0;
+      display: none;
+      color: $brokenWhite;
+      background: $primary-dark;
+      border-radius: 5px;
+      padding: 14px 16px;
+      text-decoration: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      &:hover {
+        background-color: $primary-dark;
+        color: black;
+      }
+      &.visible {
+        display: initial;
+      }
+    }
   }
   @media screen and (max-width: #{$tablet}) {
-    .topnav {
-      height: 220px;
-      overflow: hidden;
-      position: relative;
-      .myLinks {
+    .menuBar {
+      .menu {
+        height: 100%;
+        position: fixed;
         display: none;
-        flex-direction: column;
-        margin: 50px -20px 0 0;
-
-        &.visible {
-          display: flex;
-        }
-      }
-      .hamburgerIcon {
-        margin: 10px 10px 0 0;
-        color: $brokenWhite;
-        background: $primary-dark;
-        border-radius: 5px;
-        padding: 14px 16px;
-        text-decoration: none;
-        position: absolute;
+        top: 80px;
+        height: calc(100% - 80px);
+        left: 0;
         right: 0;
-        top: 0;
-        &:hover {
-          background-color: $primary-dark;
-          color: black;
+        background-color: black;
+        margin-top: 0;
+        &.visible {
+          display: initial;
         }
       }
     }

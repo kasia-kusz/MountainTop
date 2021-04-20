@@ -22,42 +22,43 @@
           />
           <p class="logoText">MountainTop</p>
         </div>
-        <div class="menu" class="myLinks">
+        <div class="menu">
           <a class="menuItem" href="#home">Home</a>
           <a class="menuItem" href="#about">About</a>
           <a class="menuItem" href="#services">Services</a>
           <a class="menuItem" href="#contact">Contact</a>
         </div>
-        <a
-          href="javascript:void(0);"
-          class="hamburgerIcon"
-          onclick="myFunction()"
-        >
+        <a class="hamburgerIcon">
           <i class="fa fa-bars"></i>
         </a>
       </div>
       <div class="headerTitle">Climb to the Top</div>
       <script>
-        function myFunction() {
-          const mobileMenu = document.querySelector(".myLinks");
+        let window_width = window.innerWidth;
+        const burger = document.querySelector(".hamburgerIcon");
+        const mobileMenu = document.querySelector(".menu");
 
-          // stare:
-          if (screen.width < 867) {
-            if (mobileMenu.style.display === "flex") {
-              mobileMenu.style.display = "none";
-            } else {
-              mobileMenu.style.display = "flex";
-            }
-          } else {
-            mobileMenu.style.display = "flex";
-          }
-
-          // prostsza wersja:
-          const window_width = window.innerWidth;
-          if (window_width < 876) {
-            mobileMenu.classList.add("visible");
-          }
+        if (window_width < 876) {
+          burger.classList.add("visible");
         }
+        //listeners
+
+        burger.addEventListener("click", (e) => {
+          mobileMenu.classList.toggle("visible");
+        });
+
+        // stare:
+        // if (screen.width < 867) {
+        //   if (mobileMenu.style.display === "flex") {
+        //     mobileMenu.style.display = "none";
+        //   } else {
+        //     mobileMenu.style.display = "flex";
+        //   }
+        // } else {
+        //   mobileMenu.style.display = "flex";
+        // }
+
+        // prostsza wersja:
       </script>
     </header>
 
