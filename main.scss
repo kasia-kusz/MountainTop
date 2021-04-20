@@ -46,24 +46,32 @@ $primary-dark: rgba(28, 119, 255, 0.808);
 //Utilities
 
 .headerMountain {
-  height: 400px;
+  height: 500px;
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   .menuBar {
+    height: 180px;
+    //chowanie ikonki hamburgera przy dużej rozdzielczości
+    .hamburgerIcon {
+      @media screen and (min-width: #{$tablet}) {
+        display: none;
+      }
+    }
     justify-content: space-between;
     padding: 0 30px;
     display: flex;
     .logo {
       display: flex;
       .logo-img {
-        width: 90px;
+        height: 90px;
       }
       .logoText {
         display: flex;
-        align-items: center;
+        //align-items: center;
+        margin-left: 10px;
+        margin-top: 25px;
         color: $brokenWhite;
         font-family: "Brush Script MT", cursive;
         font-size: 3rem;
-        margin-left: 10px;
       }
     }
     .menu {
@@ -76,7 +84,7 @@ $primary-dark: rgba(28, 119, 255, 0.808);
         font-weight: bold;
         padding: 10px 20px;
         height: 40px;
-        font-family: 'Trebuchet MS', sans-serif;
+        font-family: "Trebuchet MS", sans-serif;
         &:hover {
           background: $primary-light;
           border-radius: 5px;
@@ -84,4 +92,40 @@ $primary-dark: rgba(28, 119, 255, 0.808);
       }
     }
   }
-}
+
+    .topnav {
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      //flex-direction: column;
+      #myLinks {
+        display: none;
+        flex-direction: column;
+      }
+      .hamburgerIcon {
+        color: $brokenWhite;
+        background: $primary-dark;
+        border-radius: 5px;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover {
+          background-color: $primary-dark;
+          color: black;
+        }
+      }
+    }
+  }
+  .headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    //width: 100%;
+    color: $brokenWhite;
+    font-size: 4rem;
+    margin-top: -180px;
+  }
+

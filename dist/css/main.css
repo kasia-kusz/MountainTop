@@ -36,14 +36,21 @@
 }
 
 .headerMountain {
-  height: 400px;
+  height: 500px;
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
 }
 
 .headerMountain .menuBar {
+  height: 180px;
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
+}
+
+@media screen and (min-width: 867px) {
+  .headerMountain .menuBar .hamburgerIcon {
+    display: none;
+  }
 }
 
 .headerMountain .menuBar .logo {
@@ -51,16 +58,16 @@
 }
 
 .headerMountain .menuBar .logo .logo-img {
-  width: 90px;
+  height: 90px;
 }
 
 .headerMountain .menuBar .logo .logoText {
   display: flex;
-  align-items: center;
+  margin-left: 10px;
+  margin-top: 25px;
   color: #ece9e9;
   font-family: "Brush Script MT", cursive;
   font-size: 3rem;
-  margin-left: 10px;
 }
 
 .headerMountain .menuBar .menu {
@@ -75,10 +82,47 @@
   font-weight: bold;
   padding: 10px 20px;
   height: 40px;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .headerMountain .menuBar .menu .menuItem:hover {
   background: rgba(87, 153, 252, 0.753);
   border-radius: 5px;
+}
+
+.headerMountain .topnav {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.headerMountain .topnav #myLinks {
+  display: none;
+  flex-direction: column;
+}
+
+.headerMountain .topnav .hamburgerIcon {
+  color: #ece9e9;
+  background: rgba(28, 119, 255, 0.808);
+  border-radius: 5px;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.headerMountain .topnav .hamburgerIcon:hover {
+  background-color: rgba(28, 119, 255, 0.808);
+  color: black;
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #ece9e9;
+  font-size: 4rem;
+  margin-top: -180px;
 }
