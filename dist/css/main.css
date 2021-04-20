@@ -96,10 +96,13 @@
     overflow: hidden;
     position: relative;
   }
-  .headerMountain .topnav #myLinks {
+  .headerMountain .topnav .myLinks {
     display: none;
     flex-direction: column;
     margin: 50px -20px 0 0;
+  }
+  .headerMountain .topnav .myLinks.visible {
+    display: flex;
   }
   .headerMountain .topnav .hamburgerIcon {
     margin: 10px 10px 0 0;

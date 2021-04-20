@@ -22,7 +22,7 @@
           />
           <p class="logoText">MountainTop</p>
         </div>
-        <div class="menu" id="myLinks">
+        <div class="menu" class="myLinks">
           <a class="menuItem" href="#home">Home</a>
           <a class="menuItem" href="#about">About</a>
           <a class="menuItem" href="#services">Services</a>
@@ -39,15 +39,23 @@
       <div class="headerTitle">Climb to the Top</div>
       <script>
         function myFunction() {
-          var x = document.getElementById("myLinks");
+          const mobileMenu = document.querySelector(".myLinks");
+
+          // stare:
           if (screen.width < 867) {
-            if (x.style.display === "flex") {
-              x.style.display = "none";
+            if (mobileMenu.style.display === "flex") {
+              mobileMenu.style.display = "none";
             } else {
-              x.style.display = "flex";
+              mobileMenu.style.display = "flex";
             }
-          }else{
-            x.style.display = "flex";
+          } else {
+            mobileMenu.style.display = "flex";
+          }
+
+          // prostsza wersja:
+          const window_width = window.innerWidth;
+          if (window_width < 876) {
+            mobileMenu.classList.add("visible");
           }
         }
       </script>

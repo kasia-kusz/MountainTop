@@ -98,10 +98,14 @@ $primary-dark: rgba(28, 119, 255, 0.808);
       height: 220px;
       overflow: hidden;
       position: relative;
-      #myLinks {
+      .myLinks {
         display: none;
         flex-direction: column;
         margin: 50px -20px 0 0;
+
+        &.visible {
+          display: flex;
+        }
       }
       .hamburgerIcon {
         margin: 10px 10px 0 0;
