@@ -44,95 +44,97 @@ $primary-dark: rgba(28, 119, 255, 0.808);
 }
 
 //Utilities
-
-.headerMountain {
-  height: 500px;
-  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
-  .menuBar {
-    height: 80px;
-    // to do przepisania na fixed i na top, navbar nigdy nie jest w hero(showcase)
-    justify-content: space-between;
-    padding: 0 30px;
+.menuBar {
+  height: 80px;
+  // to do przepisania na fixed i na top, navbar nigdy nie jest w hero(showcase)
+  justify-content: space-between;
+  padding: 0 30px;
+  display: flex;
+  .logo {
     display: flex;
-    .logo {
-      display: flex;
-      .logo-img {
-        height: 90px;
-      }
-      .logoText {
-        display: flex;
-        //align-items: center;
-        margin-left: 10px;
-        margin-top: 25px;
-        color: $brokenWhite;
-        font-family: "Brush Script MT", cursive;
-        font-size: 3rem;
-      }
+    .logo-img {
+      height: 90px;
     }
-    .menu {
+    .logoText {
       display: flex;
-      //align-items: center;
+      margin-left: 10px;
       margin-top: 25px;
-      .menuItem {
-        font-size: 1.8rem;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        padding: 10px 20px;
-        height: 40px;
-        font-family: "Trebuchet MS", sans-serif;
-        &:hover {
-          background: $primary-light;
-          border-radius: 5px;
-        }
+      color: $brokenWhite;
+      font-family: "Brush Script MT", cursive;
+      font-size: 3rem;
+    }
+  }
+  .menu {
+    display: flex;
+    //align-items: center;
+    margin-top: 25px;
+    .menuItem {
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 20px;
+      height: 40px;
+      font-family: "Trebuchet MS", sans-serif;
+      &:hover {
+        background: $primary-light;
+        border-radius: 5px;
       }
     }
+  }
 
-    .hamburgerIcon {
-      margin: 10px 10px 0 0;
+  .hamburgerIcon {
+    margin: 10px 10px 0 0;
+    display: none;
+    color: $brokenWhite;
+    background: $primary-dark;
+    border-radius: 5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      background-color: $primary-dark;
+      color: black;
+    }
+    &.visible {
+      display: initial;
+    }
+  }
+}
+@media screen and (max-width: #{$tablet}) {
+  .menuBar {
+    .menu {
+      height: 100%;
+      position: fixed;
       display: none;
-      color: $brokenWhite;
-      background: $primary-dark;
-      border-radius: 5px;
-      padding: 14px 16px;
-      text-decoration: none;
-      position: absolute;
+      top: 80px;
+      height: calc(100% - 80px);
+      left: 0;
       right: 0;
-      top: 0;
-      &:hover {
-        background-color: $primary-dark;
-        color: black;
-      }
+      background-color: black;
+      margin-top: 0;
       &.visible {
         display: initial;
       }
     }
-  }
-  @media screen and (max-width: #{$tablet}) {
-    .menuBar {
-      .menu {
-        height: 100%;
-        position: fixed;
-        display: none;
-        top: 80px;
-        height: calc(100% - 80px);
-        left: 0;
-        right: 0;
-        background-color: black;
-        margin-top: 0;
-        &.visible {
-          display: initial;
-        }
-      }
+    .hamburgerIcon{
+      display: flex;
     }
   }
 }
-.headerTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: $brokenWhite;
-  font-size: 4rem;
-  margin-top: -220px;
+.headerMountain {
+  height: 400px;
+  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
+
+  .headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: $brokenWhite;
+    font-size: 4rem;
+    margin-top: -80px;
+  }
 }

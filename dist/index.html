@@ -12,8 +12,8 @@
     ></script>
   </head>
   <body>
-    <header class="headerMountain">
-      <div class="menuBar topnav">
+    <nav>
+      <div class="menuBar">
         <div class="logo">
           <img
             class="logo-img"
@@ -32,7 +32,6 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <div class="headerTitle">Climb to the Top</div>
       <script>
         let window_width = window.innerWidth;
         const burger = document.querySelector(".hamburgerIcon");
@@ -42,26 +41,23 @@
           burger.classList.add("visible");
         }
         //listeners
-
         burger.addEventListener("click", (e) => {
           mobileMenu.classList.toggle("visible");
         });
 
         // stare:
         // if (screen.width < 867) {
-        //   if (mobileMenu.style.display === "flex") {
-        //     mobileMenu.style.display = "none";
-        //   } else {
-        //     mobileMenu.style.display = "flex";
-        //   }
-        // } else {
-        //   mobileMenu.style.display = "flex";
-        // }
+        //    if (mobileMenu.style.display === "flex") {
+        //      mobileMenu.style.display = "none";} 
+        //    else { mobileMenu.style.display = "flex";}
+        // } else { mobileMenu.style.display = "flex";}
 
         // prostsza wersja:
       </script>
+    </nav>
+    <header class="headerMountain">
+      <div class="headerTitle">Climb to the Top</div>
     </header>
-
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
   </body>
 </html>

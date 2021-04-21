@@ -35,27 +35,22 @@
   }
 }
 
-.headerMountain {
-  height: 500px;
-  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
-}
-
-.headerMountain .menuBar {
+.menuBar {
   height: 80px;
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
 }
 
-.headerMountain .menuBar .logo {
+.menuBar .logo {
   display: flex;
 }
 
-.headerMountain .menuBar .logo .logo-img {
+.menuBar .logo .logo-img {
   height: 90px;
 }
 
-.headerMountain .menuBar .logo .logoText {
+.menuBar .logo .logoText {
   display: flex;
   margin-left: 10px;
   margin-top: 25px;
@@ -64,12 +59,12 @@
   font-size: 3rem;
 }
 
-.headerMountain .menuBar .menu {
+.menuBar .menu {
   display: flex;
   margin-top: 25px;
 }
 
-.headerMountain .menuBar .menu .menuItem {
+.menuBar .menu .menuItem {
   font-size: 1.8rem;
   text-decoration: none;
   color: #fff;
@@ -79,12 +74,12 @@
   font-family: "Trebuchet MS", sans-serif;
 }
 
-.headerMountain .menuBar .menu .menuItem:hover {
+.menuBar .menu .menuItem:hover {
   background: rgba(87, 153, 252, 0.753);
   border-radius: 5px;
 }
 
-.headerMountain .menuBar .hamburgerIcon {
+.menuBar .hamburgerIcon {
   margin: 10px 10px 0 0;
   display: none;
   color: #ece9e9;
@@ -97,17 +92,17 @@
   top: 0;
 }
 
-.headerMountain .menuBar .hamburgerIcon:hover {
+.menuBar .hamburgerIcon:hover {
   background-color: rgba(28, 119, 255, 0.808);
   color: black;
 }
 
-.headerMountain .menuBar .hamburgerIcon.visible {
+.menuBar .hamburgerIcon.visible {
   display: initial;
 }
 
 @media screen and (max-width: 867px) {
-  .headerMountain .menuBar .menu {
+  .menuBar .menu {
     height: 100%;
     position: fixed;
     display: none;
@@ -118,17 +113,25 @@
     background-color: black;
     margin-top: 0;
   }
-  .headerMountain .menuBar .menu.visible {
+  .menuBar .menu.visible {
     display: initial;
+  }
+  .menuBar .hamburgerIcon {
+    display: flex;
   }
 }
 
-.headerTitle {
+.headerMountain {
+  height: 400px;
+  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
+}
+
+.headerMountain .headerTitle {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   color: #ece9e9;
   font-size: 4rem;
-  margin-top: -220px;
+  margin-top: -80px;
 }
