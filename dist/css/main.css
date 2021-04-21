@@ -5,6 +5,10 @@
   font-size: 10px;
 }
 
+body {
+  background: #333;
+}
+
 .sectionWrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -67,7 +71,7 @@
 .menuBar .menu .menuItem {
   font-size: 1.8rem;
   text-decoration: none;
-  color: #fff;
+  color: #ece9e9;
   font-weight: bold;
   padding: 10px 20px;
   height: 40px;
@@ -123,7 +127,20 @@
 
 .headerMountain {
   height: 400px;
+  object-fit: cover;
+}
+
+.headerMountain:before {
+  content: "";
   background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-top: -133px;
+  width: 100%;
+  z-index: -1;
 }
 
 .headerMountain .headerTitle {
@@ -134,4 +151,8 @@
   color: #ece9e9;
   font-size: 4rem;
   margin-top: -80px;
+}
+
+.offer {
+  background-color: #ece9e9;
 }
