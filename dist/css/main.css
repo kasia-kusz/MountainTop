@@ -44,6 +44,8 @@ body {
 }
 
 .menuBar {
+  background: rgba(28, 119, 255, 0.9);
+  opacity: 0.5;
   position: fixed;
   top: 0;
   height: 80px;
@@ -114,6 +116,10 @@ body {
 
 .menuBar .hamburgerIcon.visible {
   display: initial;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 @media screen and (max-width: 867px) {

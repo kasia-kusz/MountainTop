@@ -23,8 +23,8 @@ body {
   background: #333;
 }
 
-.blocked{
-  overflow:hidden;
+.blocked {
+  overflow: hidden;
 }
 
 .sectionWrapper {
@@ -50,16 +50,16 @@ body {
   }
 }
 
-//Utilities
 
 .menuBar {
+  background: $primary-dark;
+  opacity: 0.5;
   position: fixed;
   top: 0;
   height: 80px;
   left: 0;
   right: 0;
   margin-top: 0;
-
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
@@ -118,6 +118,10 @@ body {
     }
   }
 }
+.fade-in {
+  opacity: 1;
+}
+
 @media screen and (max-width: #{$tablet}) {
   .menuBar {
     .menu {

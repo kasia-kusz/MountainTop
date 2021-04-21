@@ -33,6 +33,7 @@
         </a>
       </div>
       <script>
+        //obsługa menu
         let window_width = window.innerWidth;
         const burger = document.querySelector(".hamburgerIcon");
         const mobileMenu = document.querySelector(".menu");
@@ -43,7 +44,26 @@
         //listeners
         burger.addEventListener("click", (e) => {
           mobileMenu.classList.toggle("visible");
-          document.body.classList.toggle('blocked');
+          document.body.classList.toggle("blocked");
+        });
+
+        //dodawanie tła na menu podczas scrollu
+        let scrollpos = window.scrollY;
+        const header = document.querySelector(".menuBar");
+        const header_height = header.offsetHeight;
+        const add_class_on_scroll = () => header.classList.add("fade-in");
+        const remove_class_on_scroll = () => header.classList.remove("fade-in");
+
+        window.addEventListener("scroll", function () {
+          scrollpos = window.scrollY;
+
+          if (scrollpos >= header_height) {
+            add_class_on_scroll();
+          } else {
+            remove_class_on_scroll();
+          }
+
+          console.log(scrollpos);
         });
 
         // stare:
