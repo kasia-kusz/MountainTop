@@ -48,8 +48,13 @@ body {
 
 //Utilities
 .menuBar {
+  position: fixed;
+  top: 0;
   height: 80px;
-  // to do przepisania na fixed i na top, navbar nigdy nie jest w hero(showcase)
+  left: 0;
+  right: 0;
+  margin-top: 0;
+
   justify-content: space-between;
   padding: 0 30px;
   display: flex;
@@ -129,6 +134,7 @@ body {
 }
 .headerMountain {
   height: 400px;
+
   //background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   object-fit: cover;
   &:before {
@@ -139,9 +145,8 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    margin-top: -133px;
+    //margin-top: -133px;
     width: 100%;
-    //zindex pozwala usunąć rozmycie z ikonki
     z-index: -1;
   }
   .headerTitle {
@@ -149,11 +154,36 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     color: $brokenWhite;
     font-size: 4rem;
-    margin-top: -80px;
+    // margin-top: -80px;
   }
 }
-.offer{
+.offer {
   background-color: $brokenWhite;
+  .services {
+    .serviceItem {
+      display: flex;
+      .itemText {
+        width: 50%;
+        .title {
+          color: black;
+        }
+        .text {
+          color: black;
+        }
+        .btn-more {
+          color: black;
+        }
+      }
+      .itemImg {
+        width: 50%;
+        .img {
+          height: 300px; 
+          //object-fit: cover;
+        }
+      }
+    }
+  }
 }
