@@ -9,6 +9,10 @@ body {
   background: #333;
 }
 
+.blocked {
+  overflow: hidden;
+}
+
 .sectionWrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -121,7 +125,7 @@ body {
     height: calc(100% - 80px);
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
     margin-top: 0;
   }
   .menuBar .menu.visible {
