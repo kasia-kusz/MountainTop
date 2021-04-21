@@ -57,6 +57,7 @@ body {
 
 .menuBar .logo .logo-img {
   height: 90px;
+  margin-top: -10px;
 }
 
 .menuBar .logo .logoText {
@@ -84,15 +85,15 @@ body {
 }
 
 .menuBar .menu .menuItem:hover {
-  background: rgba(87, 153, 252, 0.753);
+  background: rgba(87, 153, 252, 0.9);
   border-radius: 5px;
 }
 
 .menuBar .hamburgerIcon {
-  margin: 10px 10px 0 0;
+  margin: 20px 20px 0 0;
   display: none;
   color: #ece9e9;
-  background: rgba(28, 119, 255, 0.808);
+  background: rgba(28, 119, 255, 0.9);
   border-radius: 5px;
   padding: 14px 16px;
   text-decoration: none;
@@ -102,8 +103,9 @@ body {
 }
 
 .menuBar .hamburgerIcon:hover {
-  background-color: rgba(28, 119, 255, 0.808);
+  background-color: rgba(28, 119, 255, 0.9);
   color: black;
+  cursor: pointer;
 }
 
 .menuBar .hamburgerIcon.visible {
@@ -119,14 +121,48 @@ body {
     height: calc(100% - 80px);
     left: 0;
     right: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
     margin-top: 0;
   }
   .menuBar .menu.visible {
-    display: initial;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menuBar .menu .menuItem {
+    width: 100%;
+    justify-content: center;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
   }
   .menuBar .hamburgerIcon {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .menuBar {
+    height: 60px;
+    padding: 0 10px;
+  }
+  .menuBar .logo {
+    display: flex;
+  }
+  .menuBar .logo .logo-img {
+    height: 70px;
+    margin-top: 0;
+  }
+  .menuBar .logo .logoText {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #ece9e9;
+    font-family: "Brush Script MT", cursive;
+    font-size: 3rem;
+  }
+  .menuBar .hamburgerIcon {
+    margin: 20px 10px 0 0;
   }
 }
 
@@ -186,5 +222,7 @@ body {
 }
 
 .offer .services .serviceItem .itemImg .img {
-  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }

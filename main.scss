@@ -10,8 +10,8 @@ $phone_small: "376px";
 
 //colors
 $brokenWhite: rgb(236, 233, 233);
-$primary-light: rgba(87, 153, 252, 0.753);
-$primary-dark: rgba(28, 119, 255, 0.808);
+$primary-light: rgba(87, 153, 252, 0.9);
+$primary-dark: rgba(28, 119, 255, 0.9);
 
 * {
   box-sizing: border-box;
@@ -47,6 +47,7 @@ body {
 }
 
 //Utilities
+
 .menuBar {
   position: fixed;
   top: 0;
@@ -62,6 +63,7 @@ body {
     display: flex;
     .logo-img {
       height: 90px;
+      margin-top: -10px;
     }
     .logoText {
       display: flex;
@@ -92,7 +94,7 @@ body {
   }
 
   .hamburgerIcon {
-    margin: 10px 10px 0 0;
+    margin: 20px 20px 0 0;
     display: none;
     color: $brokenWhite;
     background: $primary-dark;
@@ -105,6 +107,7 @@ body {
     &:hover {
       background-color: $primary-dark;
       color: black;
+      cursor: pointer;
     }
     &.visible {
       display: initial;
@@ -121,10 +124,20 @@ body {
       height: calc(100% - 80px);
       left: 0;
       right: 0;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.75);
       margin-top: 0;
       &.visible {
-        display: initial;
+        //display: initial;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .menuItem {
+        width: 100%;
+        justify-content: center;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
       }
     }
     .hamburgerIcon {
@@ -132,10 +145,32 @@ body {
     }
   }
 }
+@media screen and (max-width: #{$phone}) {
+  .menuBar {
+    height: 60px;
+    padding: 0 10px;
+    .logo {
+      display: flex;
+      .logo-img {
+        height: 70px;
+        margin-top: 0;
+      }
+      .logoText {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 20px;
+        color: $brokenWhite;
+        font-family: "Brush Script MT", cursive;
+        font-size: 3rem;
+      }
+    }
+    .hamburgerIcon {
+      margin: 20px 10px 0 0;
+    }
+  }
+}
 .headerMountain {
   height: 400px;
-
-  //background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
   object-fit: cover;
   &:before {
     content: "";
@@ -180,8 +215,10 @@ body {
       .itemImg {
         width: 50%;
         .img {
-          height: 300px; 
-          //object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          //height: 300px;
+          object-fit: cover;
         }
       }
     }
