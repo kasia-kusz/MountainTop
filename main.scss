@@ -50,10 +50,9 @@ body {
   }
 }
 
-
 .menuBar {
-  background: $primary-dark;
-  opacity: 0.5;
+  //background: $primary-dark;
+  //opacity: 0.5;
   position: fixed;
   top: 0;
   height: 80px;
@@ -119,7 +118,18 @@ body {
   }
 }
 .fade-in {
-  opacity: 1;
+  //opacity: 1;
+  &:before {
+    content: "";
+    background: #333;
+    opacity: 0.8;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media screen and (max-width: #{$tablet}) {
