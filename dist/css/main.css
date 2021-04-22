@@ -234,7 +234,7 @@ body {
 .offer .services .serviceItem .itemText .title {
   font-size: 3rem;
   font-family: "Trebuchet MS", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: rgba(28, 119, 255, 0.9);
 }
 
@@ -255,7 +255,6 @@ body {
   width: 120px;
   text-align: center;
   text-decoration: none;
-  margin-bottom: 20px;
   border-radius: 5px;
 }
 
@@ -291,15 +290,22 @@ body {
   .offer .services .serviceItem .itemText {
     width: 100%;
     margin-bottom: 20px;
+    margin: 40px 0;
   }
   .offer .services .serviceItem .itemImg {
     width: 100%;
-    margin-bottom: 50px;
   }
   .offer .services .reverse {
     flex-direction: column;
   }
   .offer .services .reverse .itemText {
     padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .offer .services .serviceItem .itemText {
+    width: 80%;
+    padding: 0;
   }
 }

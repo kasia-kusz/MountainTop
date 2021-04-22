@@ -231,7 +231,7 @@ body {
         .title {
           font-size: 3rem;
           font-family: "Trebuchet MS", sans-serif;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           color: $primary-dark;
         }
         .text {
@@ -250,7 +250,6 @@ body {
           width: 120px;
           text-align: center;
           text-decoration: none;
-          margin-bottom: 20px;
           border-radius: 5px;
           &:hover {
             background: $primary-light;
@@ -287,10 +286,13 @@ body {
         .itemText {
           width: 100%;
           margin-bottom: 20px;
+          margin: 40px 0;
+          // &:not(:first-child){
+          //   margin: 40px 0;
+          // }
         }
         .itemImg {
           width: 100%;
-          margin-bottom: 50px;
         }
       }
       .reverse {
@@ -303,4 +305,14 @@ body {
   }
 }
 @media screen and (max-width:#{$phone}) {
+  .offer {
+    .services {
+      .serviceItem {
+        .itemText {
+          width: 80%;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
