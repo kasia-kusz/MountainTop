@@ -44,15 +44,13 @@ body {
     max-width: 729px;
     // wyliczone z proporcji czyli skoro dla 1600 jest 1080px
   }
-  @media screen and (max-width: #{$tablet-small}) {
+  @media screen and (max-width: #{$tablet}) {
     max-width: 495px;
     //729/601=1.21297836938 a 601/1.21297836938=495px
   }
 }
 
 .menuBar {
-  //background: $primary-dark;
-  //opacity: 0.5;
   position: fixed;
   top: 0;
   height: 80px;
@@ -79,7 +77,6 @@ body {
   }
   .menu {
     display: flex;
-    //align-items: center;
     margin-top: 25px;
     .menuItem {
       font-size: 1.8rem;
@@ -95,7 +92,6 @@ body {
       }
     }
   }
-
   .hamburgerIcon {
     margin: 20px 20px 0 0;
     display: none;
@@ -131,7 +127,6 @@ body {
     left: 0;
   }
 }
-
 @media screen and (max-width: #{$tablet}) {
   .menuBar {
     .menu {
@@ -171,22 +166,24 @@ body {
       display: flex;
       .logo-img {
         height: 70px;
-        margin-top: 0;
+        margin-top: -10;
       }
       .logoText {
         display: flex;
         margin-left: 10px;
-        margin-top: 20px;
+        margin-top: 10px;
         color: $brokenWhite;
         font-family: "Brush Script MT", cursive;
         font-size: 3rem;
       }
     }
     .hamburgerIcon {
-      margin: 20px 10px 0 0;
+      margin: 10px 10px 0 0;
     }
   }
 }
+
+//showcase z tłem
 .headerMountain {
   height: 400px;
   object-fit: cover;
@@ -198,7 +195,6 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    //margin-top: -133px;
     width: 100%;
     z-index: -1;
   }
@@ -209,25 +205,56 @@ body {
     height: 100%;
     width: 100%;
     color: $brokenWhite;
-    font-size: 4rem;
-    // margin-top: -80px;
+    font-size: 5rem;
   }
 }
+@media screen and (max-width:#{$phone}) {
+  .headerMountain {
+    .headerTitle {
+      text-align: center;
+    }
+  }
+}
+
+//sekcja oferty
 .offer {
   background-color: $brokenWhite;
   .services {
     .serviceItem {
       display: flex;
       .itemText {
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 50%;
         .title {
-          color: black;
+          font-size: 3rem;
+          font-family: "Trebuchet MS", sans-serif;
+          margin-bottom: 20px;
+          color: $primary-dark;
         }
         .text {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
           color: black;
+          margin-bottom: 30px;
         }
         .btn-more {
           color: black;
+          font-size: 1.2rem;
+          font-family: "Trebuchet MS", sans-serif;
+          font-weight: bold;
+          border: solid 1px $primary-light;
+          padding: 10px 0;
+          width: 120px;
+          text-align: center;
+          text-decoration: none;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          &:hover {
+            background: $primary-light;
+          }
         }
       }
       .itemImg {
@@ -240,5 +267,40 @@ body {
         }
       }
     }
+    //odwrócenie dla parzystego elementu
+    .reverse {
+      flex-direction: row-reverse;
+      .itemText {
+        padding-left: 30px;
+        padding-right: 0;
+      }
+    }
   }
+}
+@media screen and (max-width: #{$tablet}) {
+  .offer {
+    .services {
+      .serviceItem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .itemText {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .itemImg {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+      }
+      .reverse {
+        flex-direction: column;
+        .itemText {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:#{$phone}) {
 }
