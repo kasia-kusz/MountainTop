@@ -12,8 +12,8 @@
     ></script>
   </head>
   <body>
-    <header class="headerMountain">
-      <div class="menuBar topnav">
+    <nav>
+      <div class="menuBar">
         <div class="logo">
           <img
             class="logo-img"
@@ -32,8 +32,8 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <div class="headerTitle">Climb to the Top</div>
       <script>
+        //obsługa menu
         let window_width = window.innerWidth;
         const burger = document.querySelector(".hamburgerIcon");
         const mobileMenu = document.querySelector(".menu");
@@ -42,26 +42,99 @@
           burger.classList.add("visible");
         }
         //listeners
-
         burger.addEventListener("click", (e) => {
           mobileMenu.classList.toggle("visible");
+          document.body.classList.toggle("blocked");
+        });
+
+        //dodawanie tła na menu podczas scrollu
+        let scrollpos = window.scrollY;
+        const header = document.querySelector(".menuBar");
+        const header_height = header.offsetHeight;
+        const add_class_on_scroll = () => header.classList.add("fade-in");
+        const remove_class_on_scroll = () => header.classList.remove("fade-in");
+
+        window.addEventListener("scroll", function () {
+          scrollpos = window.scrollY;
+
+          if (scrollpos >= header_height) {
+            add_class_on_scroll();
+          } else {
+            remove_class_on_scroll();
+          }
+
+          console.log(scrollpos);
         });
 
         // stare:
         // if (screen.width < 867) {
-        //   if (mobileMenu.style.display === "flex") {
-        //     mobileMenu.style.display = "none";
-        //   } else {
-        //     mobileMenu.style.display = "flex";
-        //   }
-        // } else {
-        //   mobileMenu.style.display = "flex";
-        // }
-
-        // prostsza wersja:
+        //    if (mobileMenu.style.display === "flex") {
+        //      mobileMenu.style.display = "none";}
+        //    else { mobileMenu.style.display = "flex";}
+        // } else { mobileMenu.style.display = "flex";}
       </script>
+    </nav>
+    <header class="headerMountain">
+      <div class="headerTitle">Climb to the Top</div>
     </header>
-
+    <section class="offer">
+      <div class="services sectionWrapper">
+        <div class="serviceItem">
+          <div class="itemText">
+            <h2 class="title">Service 1</h2>
+            <p class="text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              voluptas ex, ipsam nesciunt quidem quis facere alias dolorem.
+            </p>
+            <a href="#contact" class="btn-more">CONTACT</a>
+          </div>
+          <div class="itemImg">
+            <img class="img" src="../dist/assets/nathan.jpg" alt="service1" />
+          </div>
+        </div>
+        <div class="serviceItem reverse">
+          <div class="itemText">
+            <h2 class="title">Service 2</h2>
+            <p class="text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              voluptas ex, ipsam nesciunt quidem quis facere alias dolorem.
+            </p>
+            <a href="#contact" class="btn-more">CONTACT</a>
+          </div>
+          <div class="itemImg">
+            <img class="img" src="../dist/assets/roman.jpg" alt="service2" />
+          </div>
+        </div>
+        <div class="serviceItem">
+          <div class="itemText">
+            <h2 class="title">Service 3</h2>
+            <p class="text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              voluptas ex, ipsam nesciunt quidem quis facere alias dolorem.
+            </p>
+            <a href="#contact" class="btn-more">CONTACT</a>
+          </div>
+          <div class="itemImg">
+            <img class="img" src="../dist/assets/markus.jpg" alt="service3" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="sectionWrapper">
+        <div class="faqHeader">
+          <h2 class="headerTitle">F.A.Q.</h2>
+          <p class="headerText">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="faqQuestions">
+          <div class="question">
+            <p class="title"></p>
+            <i class="arrow"></i>
+            <div class="answer"><p class="answerText"></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
   </body>
 </html>

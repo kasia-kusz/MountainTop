@@ -10,14 +10,21 @@ $phone_small: "376px";
 
 //colors
 $brokenWhite: rgb(236, 233, 233);
-$primary-light: rgba(87, 153, 252, 0.753);
-$primary-dark: rgba(28, 119, 255, 0.808);
+$primary-light: rgba(87, 153, 252, 0.9);
+$primary-dark: rgba(28, 119, 255, 0.9);
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 10px;
+}
+body {
+  background: #333;
+}
+
+.blocked {
+  overflow: hidden;
 }
 
 .sectionWrapper {
@@ -37,102 +44,274 @@ $primary-dark: rgba(28, 119, 255, 0.808);
     max-width: 729px;
     // wyliczone z proporcji czyli skoro dla 1600 jest 1080px
   }
-  @media screen and (max-width: #{$tablet-small}) {
+  @media screen and (max-width: #{$tablet}) {
     max-width: 495px;
     //729/601=1.21297836938 a 601/1.21297836938=495px
   }
 }
 
-//Utilities
-
-.headerMountain {
-  height: 500px;
-  background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
-  .menuBar {
-    height: 80px;
-    // to do przepisania na fixed i na top, navbar nigdy nie jest w hero(showcase)
-    justify-content: space-between;
-    padding: 0 30px;
+.menuBar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  justify-content: space-between;
+  padding: 0 30px;
+  display: flex;
+  .logo {
     display: flex;
+    .logo-img {
+      height: 90px;
+      margin-top: -10px;
+    }
+    .logoText {
+      display: flex;
+      margin-left: 10px;
+      margin-top: 25px;
+      color: $brokenWhite;
+      font-family: "Brush Script MT", cursive;
+      font-size: 3rem;
+    }
+  }
+  .menu {
+    display: flex;
+    margin-top: 25px;
+    .menuItem {
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: $brokenWhite;
+      font-weight: bold;
+      padding: 10px 20px;
+      height: 40px;
+      font-family: "Trebuchet MS", sans-serif;
+      &:hover {
+        background: $primary-light;
+        border-radius: 5px;
+      }
+    }
+  }
+  .hamburgerIcon {
+    margin: 20px 20px 0 0;
+    display: none;
+    color: $brokenWhite;
+    background: $primary-dark;
+    border-radius: 5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      background-color: $primary-dark;
+      color: black;
+      cursor: pointer;
+    }
+    &.visible {
+      display: initial;
+    }
+  }
+}
+.fade-in {
+  //opacity: 1;
+  &:before {
+    content: "";
+    background: #333;
+    opacity: 0.8;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (max-width: #{$tablet}) {
+  .menuBar {
+    .menu {
+      height: 100%;
+      position: fixed;
+      display: none;
+      top: 80px;
+      height: calc(100% - 80px);
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-top: 0;
+      &.visible {
+        //display: initial;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .menuItem {
+        width: 100%;
+        justify-content: center;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .hamburgerIcon {
+      display: flex;
+    }
+  }
+}
+@media screen and (max-width: #{$phone}) {
+  .menuBar {
+    height: 60px;
+    padding: 0 10px;
     .logo {
       display: flex;
       .logo-img {
-        height: 90px;
+        height: 70px;
+        margin-top: -10;
       }
       .logoText {
         display: flex;
-        //align-items: center;
         margin-left: 10px;
-        margin-top: 25px;
+        margin-top: 10px;
         color: $brokenWhite;
         font-family: "Brush Script MT", cursive;
         font-size: 3rem;
       }
     }
-    .menu {
+    .hamburgerIcon {
+      margin: 10px 10px 0 0;
+    }
+  }
+}
+
+//showcase z tłem
+.headerMountain {
+  height: 400px;
+  object-fit: cover;
+  &:before {
+    content: "";
+    background: url("../assets/mehmet-main.jpg") no-repeat center center/cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: $brokenWhite;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width:#{$phone}) {
+  .headerMountain {
+    .headerTitle {
+      text-align: center;
+    }
+  }
+}
+
+//sekcja oferty
+.offer {
+  background-color: $brokenWhite;
+  .services {
+    .serviceItem {
       display: flex;
-      //align-items: center;
-      margin-top: 25px;
-      .menuItem {
-        font-size: 1.8rem;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        padding: 10px 20px;
-        height: 40px;
-        font-family: "Trebuchet MS", sans-serif;
-        &:hover {
-          background: $primary-light;
+      .itemText {
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        .title {
+          font-size: 3rem;
+          font-family: "Trebuchet MS", sans-serif;
+          margin-bottom: 30px;
+          color: $primary-dark;
+        }
+        .text {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+          color: black;
+          margin-bottom: 30px;
+        }
+        .btn-more {
+          color: black;
+          font-size: 1.2rem;
+          font-family: "Trebuchet MS", sans-serif;
+          font-weight: bold;
+          border: solid 1px $primary-light;
+          padding: 10px 0;
+          width: 120px;
+          text-align: center;
+          text-decoration: none;
           border-radius: 5px;
+          &:hover {
+            background: $primary-light;
+          }
+        }
+      }
+      .itemImg {
+        width: 50%;
+        .img {
+          max-width: 100%;
+          max-height: 100%;
+          //height: 300px;
+          object-fit: cover;
         }
       }
     }
-
-    .hamburgerIcon {
-      margin: 10px 10px 0 0;
-      display: none;
-      color: $brokenWhite;
-      background: $primary-dark;
-      border-radius: 5px;
-      padding: 14px 16px;
-      text-decoration: none;
-      position: absolute;
-      right: 0;
-      top: 0;
-      &:hover {
-        background-color: $primary-dark;
-        color: black;
-      }
-      &.visible {
-        display: initial;
+    //odwrócenie dla parzystego elementu
+    .reverse {
+      flex-direction: row-reverse;
+      .itemText {
+        padding-left: 30px;
+        padding-right: 0;
       }
     }
   }
-  @media screen and (max-width: #{$tablet}) {
-    .menuBar {
-      .menu {
-        height: 100%;
-        position: fixed;
-        display: none;
-        top: 80px;
-        height: calc(100% - 80px);
-        left: 0;
-        right: 0;
-        background-color: black;
-        margin-top: 0;
-        &.visible {
-          display: initial;
+}
+@media screen and (max-width: #{$tablet}) {
+  .offer {
+    .services {
+      .serviceItem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .itemText {
+          width: 100%;
+          margin: 40px 0;
+          // &:not(:first-child){
+          // margin: 40px 0;
+          // }
+        }
+        .itemImg {
+          width: 100%;
+        }
+      }
+      .reverse {
+        flex-direction: column;
+        .itemText {
+          padding-left: 0;
         }
       }
     }
   }
 }
-.headerTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: $brokenWhite;
-  font-size: 4rem;
-  margin-top: -220px;
+@media screen and (max-width:#{$phone}) {
+  .offer {
+    .services {
+      .serviceItem {
+        .itemText {
+          width: 80%;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
