@@ -313,22 +313,26 @@ body {
   background-color: #ece9e9;
 }
 
-.faqSection .faq .faqHeader .headerTitle {
+.faqSection .faqColor {
+  background-color: rgba(87, 153, 252, 0.4);
+}
+
+.faqSection .faqColor .faq .faqHeader .headerTitle {
   color: black;
 }
 
-.faqSection .faq .faqHeader .headerText {
+.faqSection .faqColor .faq .faqHeader .headerText {
   color: black;
 }
 
-.faqSection .faq .faqQuestion .question .title {
+.faqSection .faqColor .faq .faqQuestion .question .title {
   color: black;
 }
 
-.faqSection .faq .faqQuestion .question .arrow {
+.faqSection .faqColor .faq .faqQuestion .question .arrow {
   color: black;
 }
 
-.faqSection .faq .faqQuestion .question .answer .answerText {
+.faqSection .faqColor .faq .faqQuestion .question .answer .answerText {
   color: black;
 }

@@ -318,28 +318,31 @@ body {
 
 //section FAQ
 .faqSection {
-  background-color:$brokenWhite;
-  .faq {
-    
-    .faqHeader {
-      .headerTitle {
-        color: black;
-      }
-      .headerText {
-        color: black;
-      }
-    }
-    .faqQuestion {
-      .question {
-        .title {
+  background-color: $brokenWhite;
+  .faqColor {
+    background-color: rgba(87, 153, 252, 0.4);
+    //opacity: 0.4;
+    .faq {
+      .faqHeader {
+        .headerTitle {
           color: black;
         }
-        .arrow {
+        .headerText {
           color: black;
         }
-        .answer {
-          .answerText {
+      }
+      .faqQuestion {
+        .question {
+          .title {
             color: black;
+          }
+          .arrow {
+            color: black;
+          }
+          .answer {
+            .answerText {
+              color: black;
+            }
           }
         }
       }
