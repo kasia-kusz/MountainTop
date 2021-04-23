@@ -308,3 +308,27 @@ body {
     padding: 0;
   }
 }
+
+.faqSection {
+  background-color: #ece9e9;
+}
+
+.faqSection .faq .faqHeader .headerTitle {
+  color: black;
+}
+
+.faqSection .faq .faqHeader .headerText {
+  color: black;
+}
+
+.faqSection .faq .faqQuestion .question .title {
+  color: black;
+}
+
+.faqSection .faq .faqQuestion .question .arrow {
+  color: black;
+}
+
+.faqSection .faq .faqQuestion .question .answer .answerText {
+  color: black;
+}
