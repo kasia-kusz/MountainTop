@@ -315,3 +315,37 @@ body {
     }
   }
 }
+
+//section FAQ
+.faqSection {
+  background-color: $brokenWhite;
+  .faqColor {
+    background-color: rgba(87, 153, 252, 0.4);
+    //opacity: 0.4;
+    .faq {
+      .faqHeader {
+        .headerTitle {
+          color: black;
+        }
+        .headerText {
+          color: black;
+        }
+      }
+      .faqQuestion {
+        .question {
+          .title {
+            color: black;
+          }
+          .arrow {
+            color: black;
+          }
+          .answer {
+            .answerText {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

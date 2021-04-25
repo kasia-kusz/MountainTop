@@ -308,3 +308,31 @@ body {
     padding: 0;
   }
 }
+
+.faqSection {
+  background-color: #ece9e9;
+}
+
+.faqSection .faqColor {
+  background-color: rgba(87, 153, 252, 0.4);
+}
+
+.faqSection .faqColor .faq .faqHeader .headerTitle {
+  color: black;
+}
+
+.faqSection .faqColor .faq .faqHeader .headerText {
+  color: black;
+}
+
+.faqSection .faqColor .faq .faqQuestion .question .title {
+  color: black;
+}
+
+.faqSection .faqColor .faq .faqQuestion .question .arrow {
+  color: black;
+}
+
+.faqSection .faqColor .faq .faqQuestion .question .answer .answerText {
+  color: black;
+}
