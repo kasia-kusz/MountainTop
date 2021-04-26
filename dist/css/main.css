@@ -368,12 +368,8 @@ body {
   background-color: #ccc;
 }
 
-.faqSection .faqColor .faq .faqQuestions .question .btn-question .active .arrow:before {
-  transform: rotate(45deg);
-}
-
-.faqSection .faqColor .faq .faqQuestions .question .btn-question .fa-angle-right {
-  content: "\f107";
+.faqSection .faqColor .faq .faqQuestions .question .btn-question .active .arrow, .faqSection .faqColor .faq .faqQuestions .question .btn-question:hover .arrow {
+  transform: rotateZ(90deg);
 }
 
 .faqSection .faqColor .faq .faqQuestions .question .answer {

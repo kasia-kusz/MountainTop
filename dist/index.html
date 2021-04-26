@@ -143,7 +143,7 @@
             <div class="question">
               <button class="btn-question">
                 <p class="title">Pytanie 2</p>
-                <i class="fas fa-angle-right fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
               </button>
               <div class="answer">
                 <p class="answerText">
@@ -156,20 +156,21 @@
             <div class="question">
               <button class="btn-question">
                 <p class="title">Pytanie 3</p>
-                <i class="fas fa-angle-right fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
               </button>
               <div class="answer">
                 <p class="answerText">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Veritatis illum aliquid velit quia. Ipsam cumque quas ea magni
-                  ex dolorem? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, expedita!
+                  ex dolorem? Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Delectus, expedita!
                 </p>
               </div>
             </div>
             <div class="question">
               <button class="btn-question">
                 <p class="title">Pytanie 4</p>
-                <i class="fas fa-angle-right fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
               </button>
               <div class="answer">
                 <p class="answerText">
@@ -183,10 +184,16 @@
       <script>
         let acc = document.getElementsByClassName("btn-question");
         let i;
+        const matches = document.querySelectorAll("i.fas");
         for (i = 0; i < acc.length; i++) {
           acc[i].addEventListener("click", function () {
             /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
             this.classList.toggle("active");
+
+            matches.forEach((Element) => {
+              // Element.classList.toggle("arrowRotate");
+            });
+
             /* Toggle between hiding and showing the active panel */
             let panel = this.nextElementSibling;
             if (panel.style.display === "block") {
@@ -196,6 +203,9 @@
             }
           });
         }
+
+      
+
       </script>
     </section>
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->

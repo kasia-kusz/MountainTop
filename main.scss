@@ -360,18 +360,21 @@ body {
               font-size: 1.5rem;
               color: black;
             }
+            
             .active,
             &:hover {
               background-color: #ccc;
+              .arrow{
+              transform: rotateZ(90deg);}
             }
-            .active {
-              .arrow:before {
-                transform: rotate(45deg);
-              }
-            }
-            .fa-angle-right {
-              content: "\f107";
-            }
+
+            // .arrowRotate {
+            //   transform: rotateZ(90deg);
+            // }
+
+            // .fa-angle-right {
+            //   content: "\f107";
+            // }
           }
           .answer {
             padding: 0 18px;
