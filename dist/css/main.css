@@ -317,22 +317,75 @@ body {
   background-color: rgba(87, 153, 252, 0.4);
 }
 
+.faqSection .faqColor .faq .faqHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .faqSection .faqColor .faq .faqHeader .headerTitle {
+  font-size: 3rem;
   color: black;
+  margin-bottom: 10px;
 }
 
 .faqSection .faqColor .faq .faqHeader .headerText {
+  font-size: 1.4rem;
   color: black;
 }
 
-.faqSection .faqColor .faq .faqQuestion .question .title {
+.faqSection .faqColor .faq .faqQuestions {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.faqSection .faqColor .faq .faqQuestions .question {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .btn-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ece9e9;
+  color: #444;
+  cursor: pointer;
+  padding: 20px 40px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .btn-question .title {
+  font-size: 1.5rem;
   color: black;
 }
 
-.faqSection .faqColor .faq .faqQuestion .question .arrow {
-  color: black;
+.faqSection .faqColor .faq .faqQuestions .question .btn-question .active, .faqSection .faqColor .faq .faqQuestions .question .btn-question:hover {
+  background-color: #ccc;
 }
 
-.faqSection .faqColor .faq .faqQuestion .question .answer .answerText {
+.faqSection .faqColor .faq .faqQuestions .question .btn-question .active .arrow:before {
+  transform: rotate(45deg);
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .btn-question .fa-angle-right {
+  content: "\f107";
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .answer {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .answer .answerText {
   color: black;
+  font-size: 1.4rem;
+  padding: 20px;
+  line-height: 1.8rem;
 }

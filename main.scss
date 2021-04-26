@@ -321,27 +321,68 @@ body {
   background-color: $brokenWhite;
   .faqColor {
     background-color: rgba(87, 153, 252, 0.4);
-    //opacity: 0.4;
     .faq {
       .faqHeader {
+        text-align: center;
         .headerTitle {
+          font-size: 3rem;
           color: black;
+          margin-bottom: 10px;
         }
         .headerText {
+          font-size: 1.4rem;
           color: black;
         }
+        margin-bottom: 40px;
       }
-      .faqQuestion {
+      .faqQuestions {
+        font-family: "Trebuchet MS", sans-serif;
         .question {
-          .title {
-            color: black;
-          }
-          .arrow {
-            color: black;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .btn-question {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $brokenWhite;
+            color: #444;
+            cursor: pointer;
+            padding: 20px 40px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+
+            .title {
+              font-size: 1.5rem;
+              color: black;
+            }
+            .active,
+            &:hover {
+              background-color: #ccc;
+            }
+            .active {
+              .arrow:before {
+                transform: rotate(45deg);
+              }
+            }
+            .fa-angle-right {
+              content: "\f107";
+            }
           }
           .answer {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
             .answerText {
               color: black;
+              font-size: 1.4rem;
+              padding: 20px;
+              line-height: 1.8rem;
             }
           }
         }

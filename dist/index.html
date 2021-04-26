@@ -129,28 +129,74 @@
           </div>
           <div class="faqQuestions">
             <div class="question">
-              <p class="title">pytanie 1</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, illum!</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 1</p>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, illum!
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 2</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla beatae quasi dolorum enim nihil? Aliquam explicabo suscipit atque.</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 2</p>
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nulla beatae quasi dolorum enim nihil? Aliquam explicabo
+                  suscipit atque.
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 3</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum aliquid velit quia. Ipsam cumque quas ea magni ex dolorem?</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 3</p>
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis illum aliquid velit quia. Ipsam cumque quas ea magni
+                  ex dolorem? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, expedita!
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 4</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non.</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 4</p>
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <script>
+        let acc = document.getElementsByClassName("btn-question");
+        let i;
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
+            this.classList.toggle("active");
+            /* Toggle between hiding and showing the active panel */
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      </script>
     </section>
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
   </body>
