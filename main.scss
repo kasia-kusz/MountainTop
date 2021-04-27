@@ -330,7 +330,7 @@ body {
           margin-bottom: 10px;
         }
         .headerText {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           color: black;
         }
         margin-bottom: 40px;
@@ -360,21 +360,21 @@ body {
               font-size: 1.5rem;
               color: black;
             }
-            
-            .active,
             &:hover {
               background-color: #ccc;
-              .arrow{
-              transform: rotateZ(90deg);}
             }
-
             // .arrowRotate {
             //   transform: rotateZ(90deg);
             // }
-
             // .fa-angle-right {
             //   content: "\f107";
             // }
+          }
+          .active {
+            background-color: #ccc;
+            .arrow {
+              transform: rotateZ(90deg);
+            }
           }
           .answer {
             padding: 0 18px;

@@ -329,7 +329,7 @@ body {
 }
 
 .faqSection .faqColor .faq .faqHeader .headerText {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -364,11 +364,15 @@ body {
   color: black;
 }
 
-.faqSection .faqColor .faq .faqQuestions .question .btn-question .active, .faqSection .faqColor .faq .faqQuestions .question .btn-question:hover {
+.faqSection .faqColor .faq .faqQuestions .question .btn-question:hover {
   background-color: #ccc;
 }
 
-.faqSection .faqColor .faq .faqQuestions .question .btn-question .active .arrow, .faqSection .faqColor .faq .faqQuestions .question .btn-question:hover .arrow {
+.faqSection .faqColor .faq .faqQuestions .question .active {
+  background-color: #ccc;
+}
+
+.faqSection .faqColor .faq .faqQuestions .question .active .arrow {
   transform: rotateZ(90deg);
 }
 
