@@ -11,6 +11,7 @@ $phone_small: "376px";
 //colors
 $brokenWhite: rgb(236, 233, 233);
 $primary-light: rgba(87, 153, 252, 0.9);
+$primary-light-opacity: rgba(87, 153, 252, 0.4);
 $primary-dark: rgba(28, 119, 255, 0.9);
 
 * {
@@ -320,7 +321,7 @@ body {
 .faqSection {
   background-color: $brokenWhite;
   .faqColor {
-    background-color: rgba(87, 153, 252, 0.4);
+    background-color: $primary-light-opacity;
     .faq {
       .faqHeader {
         text-align: center;
@@ -388,6 +389,107 @@ body {
               line-height: 1.8rem;
             }
           }
+        }
+      }
+    }
+  }
+}
+.footer {
+  background-color: $brokenWhite;
+  .footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .address {
+      .logo {
+        display: flex;
+        align-items: center;
+        .img {
+          width: 70px;
+        }
+        .text {
+          font-size: 3rem;
+          font-family: "Brush Script MT", cursive;
+          padding: 10px 0 0 5px;
+        }
+      }
+      .addressText {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        font-family: "Trebuchet MS", sans-serif;
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        .iconDiv {
+          display: flex;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+          justify-content: center;
+          align-items: center;
+          background: $primary-light-opacity;
+          cursor: pointer;
+          &:hover{
+            background: $primary-light;
+          }
+        }
+      }
+    }
+    .links {
+      font-family: "Trebuchet MS", sans-serif;
+      display: flex;
+      width: 250px;
+      .aboutUs,
+      .connect {
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        .aboutHeader,
+        .connectHeader {
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+        .linkFooter {
+          text-decoration: none;
+          color: #000;
+          font-size: 1.4rem;
+          cursor: pointer;
+          padding: 5px 0;
+          &:hover{
+            color:$primary-dark;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:#{$tablet}) {
+  .footer {
+    .footerContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icons {
+          .iconDiv {
+            margin-bottom: 50px;
+          }
+        }
+      }
+      .links {
+        display: flex;
+        width: 100%;
+        .aboutUs,
+        .connect {
+          width: 50%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
         }
       }
     }
