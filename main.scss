@@ -431,7 +431,7 @@ body {
           align-items: center;
           background: $primary-light-opacity;
           cursor: pointer;
-          &:hover{
+          &:hover {
             background: $primary-light;
           }
         }
@@ -457,10 +457,13 @@ body {
           font-size: 1.4rem;
           cursor: pointer;
           padding: 5px 0;
-          &:hover{
-            color:$primary-dark;
+          &:hover {
+            color: $primary-dark;
           }
         }
+      }
+      .aboutUs {
+        margin-right: 20px;
       }
     }
   }
@@ -490,6 +493,9 @@ body {
           display: flex;
           flex-flow: column;
           align-items: center;
+        }
+        .aboutUs {
+          margin-right: 0;
         }
       }
     }
