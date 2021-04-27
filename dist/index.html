@@ -129,29 +129,110 @@
           </div>
           <div class="faqQuestions">
             <div class="question">
-              <p class="title">pytanie 1</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, illum!</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 1</p>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique, illum!
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 2</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla beatae quasi dolorum enim nihil? Aliquam explicabo suscipit atque.</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 2</p>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nulla beatae quasi dolorum enim nihil? Aliquam explicabo
+                  suscipit atque.
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 3</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum aliquid velit quia. Ipsam cumque quas ea magni ex dolorem?</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 3</p>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis illum aliquid velit quia. Ipsam cumque quas ea magni
+                  ex dolorem? Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Delectus, expedita!
+                </p>
+              </div>
             </div>
             <div class="question">
-              <p class="title">pytanie 4</p>
-              <i class="arrow far fa-caret-square-right"></i>
-              <div class="answer"><p class="answerText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non.</p></div>
+              <button class="btn-question">
+                <p class="title">Pytanie 4</p>
+                <i class="fas fa-angle-right fa-2x arrow"></i>
+              </button>
+              <div class="answer">
+                <p class="answerText">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <script>
+        let btn = document.getElementsByClassName("btn-question");
+        let i;
+
+        for (i = 0; i < btn.length; i++) {
+          btn[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      </script>
     </section>
+    <footer class="footer">
+      <div class="sectionWrapper footerContainer">
+        <div class="address">
+          <div class="logo">
+            <img
+              class="img"
+              src="./assets/mountain-iconDark.svg"
+              alt="MountainTop logo"
+            />
+            <p class="text">MountainTop</p>
+          </div>
+          <p class="addressText">23 London AVE Chelsey, UK, DC 34400</p>
+          <div class="icons">
+            <div class="iconDiv"><i class="fab fa-facebook-f icon fa-2x"></i></div>
+            <div class="iconDiv"><i class="fas fa-map-signs icon fa-2x"></i></div>
+            <div class="iconDiv"><i class="far fa-paper-plane icon fa-2x"></i></div>
+          </div>
+        </div>
+        <div class="links">
+          <div class="aboutUs">
+            <p class="aboutHeader">About Us</p>
+            <a class="linkFooter" href="#cp">Company Profile</a>
+            <a class="linkFooter" href="#ci">CSR Articles</a>
+            <a class="linkFooter" href="#m">Media</a>
+          </div>
+          <div class="connect">
+            <p class="connectHeader">Connect</p>
+            <a class="linkFooter" href="#ep">Employee Portal</a>
+            <a class="linkFooter" href="#cp">Customer Portal</a>
+            <a class="linkFooter" href="#km">Know More</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
   </body>
 </html>
